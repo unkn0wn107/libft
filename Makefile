@@ -6,13 +6,13 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/08 16:29:45 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/08 17:26:03 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = ft_isalpha.c
 OBJS = ${SRCS:.c=.o}
-H = includes/ft.h
+H = ft.h
 CFLAGS = -Wall -Wextra -Werror
 
 all:		libft.a
