@@ -6,11 +6,11 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/08 17:38:26 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/08 23:46:43 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_isalpha.c
+SRCS = ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c
 OBJS = ${SRCS:.c=.o}
 H = libft.h
 CFLAGS = -Wall -Wextra -Werror
