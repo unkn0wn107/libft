@@ -3,26 +3,28 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: agaley <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/08 02:38:02 by alex             ###   ########lyon.fr    #
+#    Updated: 2022/11/08 16:29:45 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-NAMES = ft_isalpha
-OBJS = ${.c=.o}
+SRCS = ft_isalpha.c
+OBJS = ${SRCS:.c=.o}
 H = includes/ft.h
 CFLAGS = -Wall -Wextra -Werror
 
 all:		libft.a
 
-libft.a:
-			gcc ${CFLAGS} -I ${H} c $< -o ${<:.c=.o}
-			ar rc ../libft.a $(OBJS)
+%.o:		%.c ${H} Makefile
+			$(CC) ${CFLAGS} $< -c
+
+libft.a:	${OBJS}
+			ar rc libft.a ${OBJS}
 
 clean:
-			$(foreach obj, $(OBJS), rm -f $(obj);)
+			$(foreach obj, ${OBJS}, rm -f ${obj})
 
 fclean:		clean
 			rm -f libft.a
