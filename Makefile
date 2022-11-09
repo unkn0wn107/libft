@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/09 18:00:38 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/09 18:19:13 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,18 +31,14 @@ all:			${NAME}
 ${NAME}:	${OBJS}
 					ar rc ${NAME} ${OBJS}
 
-so:
-					${CC} -nostartfiles -fPIC ${CFLAGS} ${SRCS}
-					gcc -nostartfiles -shared -o libft.so ${OBJS}
-
 clean:
 					$(foreach obj, ${OBJS}, rm -f ${obj})
-					find . -name "libft.so" -delete
 
 fclean:		clean
 					find . -name "${NAME}" -delete
 					find . -name "a.out" -delete
 
 re:				fclean all
+					make
 
 .PHONY:		all clean fclean re
