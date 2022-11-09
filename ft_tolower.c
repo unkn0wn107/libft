@@ -6,13 +6,13 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:01:15 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/09 13:04:53 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/09 13:26:06 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if ('A' <= c && c <= 'A')
+	if ('A' <= c && c <= 'Z')
 		return (c + 'a' - 'A');
 	return (c);
 }
