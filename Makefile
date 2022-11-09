@@ -6,16 +6,18 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/09 14:27:06 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/09 17:37:40 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
-				ft_toupper.c ft_tolower.c \
-				ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-				ft_strlen.c
+SRCS = $(shell find . -type f -name "*.c")
+# TODO : change to static declaration when all functions are available
+# SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
+# 				ft_toupper.c ft_tolower.c \
+# 				ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+# 				ft_strlen.c ft_strlcpy.c ft_strlcat.c
 OBJS = ${SRCS:.c=.o}
 H = libft.h
 CFLAGS = -Wall -Wextra -Werror
