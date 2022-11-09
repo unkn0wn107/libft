@@ -1,4 +1,6 @@
 libftTester/
 *.o
 *.a
+*.so
+*.out
 .notes
