@@ -8,4 +8,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: unkn0wn107/libftOps@main
+      - uses: unkn0wn107/libftOps@refactor/francinette
