@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:48:07 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/09 23:55:33 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/13 23:54:21 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (n--)
 	{
 		if (*s1 != *s2 || *s1 == '\0' || *s2 == '\0')
-			return ((int)(*s1 - *s2));
+			return ((int)(*(unsigned char *)s1 - *(unsigned char *)s2));
 		s1++;
 		s2++;
 	}
