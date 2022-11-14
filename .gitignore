@@ -5,4 +5,5 @@ libftTester/
 *.so
 *.out
 *.gch
+.vscode
 .notes
