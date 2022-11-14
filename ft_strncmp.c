@@ -6,12 +6,11 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 14:48:07 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/13 23:54:21 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 21:51:26 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// while ((s1[i] || s2[i]) && i < n)
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
