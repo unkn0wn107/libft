@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/10 12:29:53 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/14 23:47:59 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
 			ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 			ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
 			ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
-			ft_atoi.c ft_strdup.c ft_calloc.c
+			ft_atoi.c ft_strdup.c ft_calloc.c \
+			ft_substr.c ft_strjoin.c
 OBJS = ${SRCS:.c=.o}
 H = libft.h
 CFLAGS = -Wall -Wextra -Werror
