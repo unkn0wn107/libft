@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 15:59:04 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/10 10:36:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/14 01:12:24 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strnstr(const char *hs, const char *needle, size_t len)
 	if (!needle[0])
 		return ((char *)hs);
 	i = 0;
-	while (hs[i] && i < len)
+	while (hs[i])
 	{
 		j = 0;
-		while ((hs[i + j] == needle[j] || needle[j] == '\0') && i + j < len + 1)
+		while ((hs[i + j] == needle[j] || needle[j] == '\0') && i + j <= len)
 		{
-			if (!needle[j])
+			if (needle[j] == '\0')
 				return (&((char *)hs)[i]);
 			j++;
 		}
