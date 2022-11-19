@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 21:39:31 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/19 21:52:23 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/19 22:39:14 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	size_t	width;
 
+	if (!s)
+		return (NULL);
 	width = ft_min(ft_strlen(s) - start, len);
 	if (start >= ft_strlen(s))
 		width = 0;
