@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 21:39:31 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/18 01:51:25 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/19 21:52:23 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	width;
 
 	width = ft_min(ft_strlen(s) - start, len);
+	if (start >= ft_strlen(s))
+		width = 0;
 	str = malloc(sizeof(char) * (width + 1));
 	if (!str)
 		return (NULL);
