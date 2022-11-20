@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 22:47:16 by alex              #+#    #+#             */
-/*   Updated: 2022/11/19 23:33:14 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/20 04:24:55 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,24 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	setlen;
-	size_t	count;
+	size_t	strlen;
 	size_t	i;
 
-	setlen = ft_strlen(set);
-	while (s1 && ft_strnstr(s1, set, setlen))
-		s1 = s1 + setlen;
-	count = 0;
-	i = ft_strlen(s1);
-	s1 = s1 + i;
-	while (ft_strnstr(s1 - setlen, set, setlen) && count++)
+	while (s1 && ft_strnstr(s1, set, 1))
 	{
-		s1 = s1 - setlen;
-		i = i - setlen;
+		i = 0;
+		while (ft_strchr(s1, set[i++]))
+			s1++;
 	}
-	str = (char *)malloc(sizeof(char) * i);
+	strlen = ft_strlen(s1);
+	s1 = s1 + strlen;
+	while (ft_strnstr(s1--, set, 1))
+		strlen--;
+	str = (char *)malloc(sizeof(char) * (strlen + 1));
 	if (!str)
 		return (NULL);
-	s1 = s1 - i;
-	ft_strlcat(str, s1, i);
+	s1 = s1 - strlen;
+	ft_strlcpy(str, s1, strlen);
+	str[strlen] = '\0';
 	return (str);
 }
