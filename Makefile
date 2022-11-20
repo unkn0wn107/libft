@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/20 00:08:32 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/20 02:05:05 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
 			ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 			ft_atoi.c ft_strdup.c ft_calloc.c \
 			ft_substr.c ft_strjoin.c ft_strtrim.c \
+			ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS = ${SRCS:.c=.o}
 H = libft.h
