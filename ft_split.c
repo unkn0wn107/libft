@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 22:55:40 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/23 21:12:28 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 23:36:05 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_count_words(char const *str, char c)
 
 	i = 0;
 	count = 0;
-	while (str[i])
+	while (str && str[i])
 	{
 		while (str[i] && str[i] == c)
 			i++;
@@ -52,18 +52,23 @@ static char	*ft_strdup_word(char const *str, char c)
 	word = (char *)malloc((i + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
-	ft_strlcpy(word, str, i + 1);
+	if (i == 0)
+		word[i] = '\0';
+	else
+		ft_strlcpy(word, str, i + 1);
 	return (word);
 }
 
 char	**ft_split(char const *str, char c)
 {
-	size_t	wn;
-	char	**tab;
+	//char const	*save;
+	size_t		wn;
+	char		**tab;
 
 	tab = (char **)malloc((ft_count_words(str, c) + 1) * sizeof(char *));
 	if (!tab || !str)
 		return (NULL);
+	//save = str;
 	wn = 0;
 	while (*str)
 	{
@@ -79,8 +84,9 @@ char	**ft_split(char const *str, char c)
 		while (*str && *str == c)
 			str++;
 	}
-	if (wn == 0)
-		free(tab[0]);
-	tab[wn] = (void *)0;
+	// Empêche leak pour ft_split("gg", 'g') mais ne marche plus pour ""
+	//if (wn == 0 && tab[0] && *save)
+	//	free(tab[0]);
+	tab[wn] = NULL;
 	return (tab);
 }
