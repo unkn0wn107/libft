@@ -6,14 +6,22 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 22:55:40 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/20 23:04:41 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 04:03:40 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_count_words(char const *str, char c)
+static char	**ft_freeall(char **tab, size_t wn)
+{
+	while (wn--)
+		free(tab[wn]);
+	free(tab);
+	return (NULL);
+}
+
+static size_t	ft_count_words(char const *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -34,7 +42,7 @@ size_t	ft_count_words(char const *str, char c)
 	return (count);
 }
 
-char	*ft_strdup_word(char const *str, char c)
+static char	*ft_strdup_word(char const *str, char c)
 {
 	size_t	i;
 	char	*word;
@@ -43,6 +51,8 @@ char	*ft_strdup_word(char const *str, char c)
 	while (str[i] && str[i] != c)
 		i++;
 	word = (char *)malloc((i + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
 	ft_strlcpy(word, str, i + 1);
 	return (word);
 }
@@ -53,12 +63,16 @@ char	**ft_split(char const *str, char c)
 	char	**tab;
 
 	tab = (char **)malloc((ft_count_words(str, c) + 1) * sizeof(char *));
+	if (!tab || !str)
+		return (NULL);
 	wn = 0;
 	while (*str)
 	{
 		while (*str && *str == c)
 			str++;
 		tab[wn] = ft_strdup_word(str, c);
+		if (!tab[wn])
+			return (ft_freeall(tab, wn));
 		if (*str && *str != c)
 			wn++;
 		while (*str && *str != c)
