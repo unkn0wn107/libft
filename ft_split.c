@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 22:55:40 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/23 04:03:40 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:28 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static char	**ft_freeall(char **tab, size_t wn)

@@ -6,11 +6,11 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:53:16 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/19 23:55:07 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 20:59:03 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

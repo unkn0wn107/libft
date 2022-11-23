@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 01:31:43 by alex              #+#    #+#             */
-/*   Updated: 2022/11/23 20:53:01 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:11 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_nbrlen(int nbr)

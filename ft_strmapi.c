@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 22:31:38 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/20 02:02:49 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:45 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

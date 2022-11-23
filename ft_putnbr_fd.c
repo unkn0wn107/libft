@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:59:06 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/19 23:59:07 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:19 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int nb, int fd)

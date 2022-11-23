@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 22:25:49 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/19 22:37:04 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:37 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

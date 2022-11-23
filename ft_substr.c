@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 21:39:31 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/19 22:39:14 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:55 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_min(size_t val1, size_t val2)

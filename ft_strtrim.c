@@ -6,11 +6,10 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 22:47:16 by alex              #+#    #+#             */
-/*   Updated: 2022/11/20 22:18:31 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 21:12:50 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	ft_issep(char c, char const *charset)
