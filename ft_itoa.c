@@ -6,14 +6,14 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 01:31:43 by alex              #+#    #+#             */
-/*   Updated: 2022/11/20 03:47:17 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/11/23 20:53:01 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_nbrlen(int nbr)
+static int	ft_nbrlen(int nbr)
 {
 	int			i;
 	int			min;
@@ -35,12 +35,10 @@ int	ft_nbrlen(int nbr)
 	return (++i + min);
 }
 
-char	*ft_itoa(int nbr)
+static void	ft_nbrcpy(char *str, int nbr)
 {
 	long int	n;
-	char		*str;
 
-	str = (char *)malloc((1 + ft_nbrlen(nbr)) * sizeof(char));
 	n = nbr;
 	if (n < 0)
 		n *= -1;
@@ -58,7 +56,15 @@ char	*ft_itoa(int nbr)
 	}
 	if (nbr < 0)
 		*str = '-';
-	else
-		str++;
+}
+
+char	*ft_itoa(int nbr)
+{
+	char		*str;
+
+	str = (char *)malloc((1 + ft_nbrlen(nbr)) * sizeof(char));
+	if (!str)
+		return (NULL);
+	ft_nbrcpy(str, nbr);
 	return (str);
 }
