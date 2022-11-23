@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2022/11/20 03:49:14 by agaley           ###   ########lyon.fr    #
+#    Updated: 2022/11/23 21:04:12 by alex             ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ ${NAME}:	${OBJS}
 
 clean:
 			$(foreach obj, ${OBJS}, rm -f ${obj})
+			find . -name "*.gch" -delete
 
 fclean:		clean
 			find . -name "${NAME}" -delete
