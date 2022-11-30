@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 22:55:40 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/23 23:36:05 by alex             ###   ########lyon.fr   */
+/*   Updated: 2022/12/01 00:27:40 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,34 +59,42 @@ static char	*ft_strdup_word(char const *str, char c)
 	return (word);
 }
 
+static size_t	ft_move_count(char const *str, char c, int eq)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] && eq == 1 && str[i] == c)
+		i++;
+	while (str[i] && eq == 0 && str[i] != c)
+		i++;
+	return (i);
+}
+
 char	**ft_split(char const *str, char c)
 {
-	//char const	*save;
+	char const	*save;
 	size_t		wn;
 	char		**tab;
 
 	tab = (char **)malloc((ft_count_words(str, c) + 1) * sizeof(char *));
 	if (!tab || !str)
 		return (NULL);
-	//save = str;
+	save = str;
 	wn = 0;
 	while (*str)
 	{
-		while (*str && *str == c)
-			str++;
+		str = str + ft_move_count(str, c, 1);
 		tab[wn] = ft_strdup_word(str, c);
 		if (!tab[wn])
 			return (ft_freeall(tab, wn));
 		if (*str && *str != c)
 			wn++;
-		while (*str && *str != c)
-			str++;
-		while (*str && *str == c)
-			str++;
+		str = str + ft_move_count(str, c, 0);
+		str = str + ft_move_count(str, c, 1);
 	}
-	// Empêche leak pour ft_split("gg", 'g') mais ne marche plus pour ""
-	//if (wn == 0 && tab[0] && *save)
-	//	free(tab[0]);
+	if (wn == 0 && tab[0] && *save)
+		free(tab[0]);
 	tab[wn] = NULL;
 	return (tab);
 }
