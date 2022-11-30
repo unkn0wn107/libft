@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 22:47:16 by alex              #+#    #+#             */
-/*   Updated: 2022/11/23 21:12:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/01 00:43:42 by alex             ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 	strlen = ft_strlen(s1);
 	s1 = s1 + strlen;
-	while (set && ft_issep(*(s1 - 1), set) && strlen--)
+	while (set && ft_issep(*(s1 - 1), set) && strlen != 0 && strlen--)
 		s1--;
 	str = (char *)malloc(sizeof(char) * (strlen + 1));
 	if (!str)
