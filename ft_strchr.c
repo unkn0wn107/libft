@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:08:49 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/09 23:48:31 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/04 23:24:38 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*s2;
+	size_t		i;
+	char		*s2;
 
 	s2 = (char *)s;
 	i = 0;

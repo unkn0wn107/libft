@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:05:44 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/10 12:09:24 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/04 23:21:15 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		i;
+	size_t	i;
 	char	*dup;
 
 	i = 0;
