@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:59:06 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/23 21:12:19 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/08 08:08:41 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	if (-2147483648 < nb && nb < 0)
+	long int	n;
+
+	n = (long int)nb;
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb *= -1;
+		n *= -1;
 	}
-	if (0 <= nb && nb < 10)
-		ft_putchar_fd(nb + '0', fd);
-	else if (nb == -2147483648)
-	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putchar_fd('8', fd);
-	}
+	if (0 <= n && n < 10)
+		ft_putchar_fd(n + '0', fd);
 	else
 	{
-		ft_putnbr_fd(nb / 10, fd);
-		ft_putchar_fd(nb % 10 + '0', fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
