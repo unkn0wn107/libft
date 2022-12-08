@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 14:46:18 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/09 17:33:37 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/08 08:47:32 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dstlen;
 	size_t	len;
 
+	if (!dst && size == 0)
+		return (ft_strlen(src));
 	dstlen = ft_strlen(dst);
 	len = dstlen + ft_strlen(src);
 	if (size < dstlen || size == 0)
