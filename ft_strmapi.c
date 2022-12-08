@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 22:31:38 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/23 21:12:45 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/08 07:57:17 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	str = (char *)malloc((1 + ft_strlen(s)) * sizeof(char));
 	if (!str)
 		return (NULL);

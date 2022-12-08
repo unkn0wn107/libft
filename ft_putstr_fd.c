@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:53:16 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:51:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/08 07:59:38 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
+	while (s && *s)
 		write(fd, s++, 1);
 }
