@@ -6,12 +6,20 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:05:44 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:09:12 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:20:51 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+/**
+ * Duplicates a string and returns a pointer to the duplicate.
+ *
+ * @param s1 The string to duplicate.
+ *
+ * @returns A freeable pointer to the duplicated string.
+ * NULL if allocation failed.
+ */
 char	*ft_strdup(const char *s1)
 {
 	size_t	i;

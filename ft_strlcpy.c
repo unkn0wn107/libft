@@ -6,12 +6,22 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 23:36:06 by agaley            #+#    #+#             */
-/*   Updated: 2022/11/09 17:14:28 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:54:15 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Copies a string into a destination. NUL-terminate the result.
+ * The NULL-byte should be included in size.
+ *
+ * @param dst The destination string.
+ * @param src The source string.
+ * @param size The size of the destination string.
+ *
+ * @returns The length of src string.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

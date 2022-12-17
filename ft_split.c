@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 22:55:40 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:47:03 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:30:31 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,14 @@ static size_t	ft_move_count(char const *str, char c, int eq)
 	return (i);
 }
 
+/**
+ * Splits a string into a NUL-terminated array of words (delimited by c).
+ *
+ * @param str The string to split.
+ * @param c The delimiting character.
+ *
+ * @returns A NUL-terminated array of words.
+ */
 char	**ft_split(char const *str, char c)
 {
 	char const	*save;

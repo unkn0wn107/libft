@@ -6,12 +6,21 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 22:25:49 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:45:07 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:26:13 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Joins two strings together.
+ *
+ * @param s1 The first string.
+ * @param s2 The second string.
+ *
+ * @returns A new string with joined s1 and s2.
+ * NULL if allocation failed.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*out;

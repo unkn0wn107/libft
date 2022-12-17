@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 22:47:16 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:51:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:37:34 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,15 @@ char	ft_issep(char c, char const *charset)
 	return (0);
 }
 
+/**
+ * Removes the specified characters from the begining and end of a string.
+ *
+ * @param s1 The string to trim.
+ * @param set The characters to remove.
+ *
+ * @returns The trimmed string as a new string.
+ * NULL if allocation failed or s1 is NULL.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;

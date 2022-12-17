@@ -6,12 +6,22 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 14:46:18 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 08:47:32 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:17:06 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Concatenates two NUL-terminated strings. NUL-terminate the result.
+ * The NULL-byte should be included in size.
+ *
+ * @param dst The destination string.
+ * @param src The source string.
+ * @param size The size of the destination string.
+ *
+ * @returns The length of the string it tried to create.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;

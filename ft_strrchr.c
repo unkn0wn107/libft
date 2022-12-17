@@ -6,12 +6,21 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:08:49 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:25:04 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:40:02 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Finds the last occurrence of a character in a string.
+ *
+ * @param s The string to search.
+ * @param c The character to search for.
+ *
+ * @returns The last occurrence of the character (can be '\0') in the string.
+ * NULL if the character was not found.
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;

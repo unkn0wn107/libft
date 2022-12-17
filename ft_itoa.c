@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 01:31:43 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:51:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 14:33:14 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,13 @@ static void	ft_nbrcpy(char *str, int nbr)
 		*str = '-';
 }
 
+/**
+ * Converts an integer to a string.
+ *
+ * @param nbr The integer to convert.
+ *
+ * @returns The string representation of the integer.
+ */
 char	*ft_itoa(int nbr)
 {
 	char		*str;

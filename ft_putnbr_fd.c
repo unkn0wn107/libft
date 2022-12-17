@@ -6,12 +6,20 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:59:06 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 08:08:41 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 15:05:45 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Prints an integer to a file descriptor.
+ *
+ * @param nb The integer to print.
+ * @param fd The file descriptor to print to.
+ *
+ * @returns None
+ */
 void	ft_putnbr_fd(int nb, int fd)
 {
 	long int	n;

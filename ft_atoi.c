@@ -6,12 +6,19 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 10:55:04 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/08 07:51:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2022/12/17 14:30:12 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Converts a string to an integer.
+ *
+ * @param str The string to convert.
+ *
+ * @returns The integer representation of the string.
+ */
 int	ft_atoi(const char *str)
 {
 	int					sign;
