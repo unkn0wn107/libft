@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:59:06 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 00:40:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/12 00:46:11 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_putnbr_fd(int nb, int fd)
 			return (-1);
 	}
 	if (0 <= n && n < 10)
-		return (ft_putchar_fd(n + '0', fd));
+		return (size + ft_putchar_fd(n + '0', fd));
 	else
 	{
 		wsize = ft_putnbr_fd(n / 10, fd);
