@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:59:06 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 00:22:11 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/12 00:40:50 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_putnbr_fd(int nb, int fd)
 	{
 		wsize = ft_putnbr_fd(n / 10, fd);
 		if (wsize > 0 && ft_putchar_fd(n % 10 + '0', fd) == 1)
-			size += wsize;
+			size += wsize + 1;
 		else
 			return (-1);
 	}
