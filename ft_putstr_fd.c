@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:53:16 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 15:08:51 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/11 21:02:29 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
  * @param s The string to print.
  * @param fd The file descriptor to print to.
  *
- * @returns None
+ * @returns length of printed string or -1 if an error occured
  */
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
 
 	len = ft_strlen(s);
-	write(fd, s, len);
+	return(write(fd, s, len));
 }

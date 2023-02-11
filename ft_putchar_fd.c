@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 18:07:46 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 15:03:44 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/11 21:03:37 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
  * @param c The character to write.
  * @param fd The file descriptor to write to.
  *
- * @returns None
+ * @returns 1 on success -1 if error occured, cf write return values for others
  */
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
