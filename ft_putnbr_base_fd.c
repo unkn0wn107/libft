@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:02:40 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 02:15:52 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/12 16:52:56 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,29 +36,27 @@ static int	ft_base_error(char *base)
 	return (0);
 }
 
-static int	ft_putnbr_baselen_fd(int nbr, char *base, int baselen, int fd)
+static int	ft_putnbrblen_fd(long int nbr, char *base, int baselen, int fd)
 {
-	long int	nb;
-	int			size;
-	int			wsize;
+	long long int	nb;
+	int				size;
+	int				wsize;
 
-	if (ft_base_error(base))
-		return (-1);
 	size = 0;
-	nb = (long int)nbr;
+	nb = (long long int)nbr;
 	if (nb < 0)
 	{
+		nb *= -1;
 		if (ft_putchar_fd('-', fd) == 1)
 			size++;
 		else
 			return (-1);
-		nb *= -1;
 	}
 	if (0 <= nb && nb < baselen)
 		return (size + ft_putchar_fd(base[nb], fd));
 	else
 	{
-		wsize = ft_putnbr_baselen_fd(nb / baselen, base, baselen, fd);
+		wsize = ft_putnbrblen_fd(nb / baselen, base, baselen, fd);
 		if (wsize > 0 && ft_putchar_fd(base[nb % baselen], fd) == 1)
 			size += wsize + 1;
 		else
@@ -67,12 +65,14 @@ static int	ft_putnbr_baselen_fd(int nbr, char *base, int baselen, int fd)
 	return (size);
 }
 
-int	ft_putnbr_base_fd(int nbr, char *base, int fd)
+int	ft_putnbr_base_fd(long int nbr, char *base, int fd)
 {
 	unsigned int	baselen;
 
+	if (ft_base_error(base))
+		return (-1);
 	baselen = 0;
 	while (base[baselen])
 		baselen++;
-	return (ft_putnbr_baselen_fd(nbr, base, baselen, fd));
+	return (ft_putnbrblen_fd(nbr, base, baselen, fd));
 }
