@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2023/02/12 02:10:33 by agaley           ###   ########lyon.fr    #
+#    Updated: 2023/02/12 22:05:52 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c \
 	ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-	ft_putnbr_base_fd.c
+	ft_putnbr_base_fd.c ft_putunbr_base_fd.c ft_puthex_fd.c ft_putptr_fd.c
 
 OBJS = ${SRCS:.c=.o}
 CFLAGS = -Wall -Wextra -Werror
