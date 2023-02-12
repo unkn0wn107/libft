@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:53:16 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/11 21:02:29 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/12 22:57:52 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_putstr_fd(char *s, int fd)
 {
 	int	len;
 
+	if (!s)
+		return (write(fd, "(null)", 6));
 	len = ft_strlen(s);
-	return(write(fd, s, len));
+	return (write(fd, s, len));
 }
