@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2023/02/12 22:05:52 by agaley           ###   ########lyon.fr    #
+#    Updated: 2023/02/12 23:21:36 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ all:	${LIB}
 		${CC} ${CFLAGS} $< -c
 
 ${LIB}:	${OBJS}
-		ar rc ${LIB} ${OBJS}
+		ar rcs ${LIB} ${OBJS}
 
 clean:
 		$(foreach obj, ${OBJS}, rm -f ${obj})
