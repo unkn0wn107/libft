@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:02:40 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 17:11:19 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/13 00:18:39 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,9 @@ int	ft_putunbr_base_fd(unsigned long int nbr, char *base, int fd)
 		else
 			return (-1);
 	}
+	else if (ft_putchar_fd(base[nbr], fd) == 1)
+		return (size + 1);
 	else
-		return (size + ft_putchar_fd(base[nbr], fd));
+		return (-1);
 	return (size);
 }
