@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 01:07:46 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/13 00:17:06 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/02/15 21:14:48 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,12 @@ int	ft_putptr_fd(void *ptr, int fd)
 
 	if (!ptr)
 		return (ft_putstr_fd("(nil)", fd));
-	size = ft_puthex_fd((unsigned long)ptr, 1, fd);
+	size = 0;
+	if (ft_putstr_fd("0x", fd) == 2)
+		size = 2;
+	else
+		return (-1);
+	size += ft_puthex_fd((unsigned long)ptr, 1, fd);
 	if (size < 0)
 		return (-1);
 	return (size);
