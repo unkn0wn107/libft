@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:53:16 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 22:57:52 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/03/10 23:20:02 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  *
  * @returns length of printed string or -1 if an error occured
  */
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(const char *s, int fd)
 {
 	int	len;
 

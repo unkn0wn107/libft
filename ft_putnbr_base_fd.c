@@ -6,13 +6,13 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:02:40 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 16:52:56 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/03/10 23:29:14 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_base_error(char *base)
+static int	ft_base_error(const char *base)
 {
 	int	i;
 	int	j;
@@ -36,7 +36,7 @@ static int	ft_base_error(char *base)
 	return (0);
 }
 
-static int	ft_putnbrblen_fd(long int nbr, char *base, int baselen, int fd)
+static int	ft_putnbrblen_fd(long int nbr, const char *base, int bselen, int fd)
 {
 	long long int	nb;
 	int				size;
@@ -52,12 +52,12 @@ static int	ft_putnbrblen_fd(long int nbr, char *base, int baselen, int fd)
 		else
 			return (-1);
 	}
-	if (0 <= nb && nb < baselen)
+	if (0 <= nb && nb < bselen)
 		return (size + ft_putchar_fd(base[nb], fd));
 	else
 	{
-		wsize = ft_putnbrblen_fd(nb / baselen, base, baselen, fd);
-		if (wsize > 0 && ft_putchar_fd(base[nb % baselen], fd) == 1)
+		wsize = ft_putnbrblen_fd(nb / bselen, base, bselen, fd);
+		if (wsize > 0 && ft_putchar_fd(base[nb % bselen], fd) == 1)
 			size += wsize + 1;
 		else
 			return (-1);
@@ -65,7 +65,7 @@ static int	ft_putnbrblen_fd(long int nbr, char *base, int baselen, int fd)
 	return (size);
 }
 
-int	ft_putnbr_base_fd(long int nbr, char *base, int fd)
+int	ft_putnbr_base_fd(long int nbr, const char *base, int fd)
 {
 	unsigned int	baselen;
 

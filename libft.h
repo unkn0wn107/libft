@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/12 17:51:11 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/03/10 23:21:02 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdint.h>
+# include <stdarg.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -58,11 +59,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 void	ft_putendl_fd(char *s, int fd);
 int		ft_putchar_fd(char c, int fd);
-int		ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(const char *s, int fd);
 int		ft_putnbr_fd(int nb, int fd);
-int		ft_putnbr_base_fd(long int nbr, char *base, int fd);
-int		ft_putunbr_base_fd(unsigned long int nbr, char *base, int fd);
+int		ft_putnbr_base_fd(long int nbr, const char *base, int fd);
+int		ft_putunbr_base_fd(unsigned long int nbr, const char *base, int fd);
 int		ft_puthex_fd(unsigned long int hex, char low, int fd);
 int		ft_putptr_fd(void *ptr, int fd);
+int		ft_printf(const char *format, ...);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 14:02:40 by agaley            #+#    #+#             */
-/*   Updated: 2023/02/13 00:18:39 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/03/10 23:16:44 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_base_error(char *base)
+static int	ft_base_error(const char *base)
 {
 	int	i;
 	int	j;
@@ -36,7 +36,7 @@ static int	ft_base_error(char *base)
 	return (0);
 }
 
-int	ft_putunbr_base_fd(unsigned long int nbr, char *base, int fd)
+int	ft_putunbr_base_fd(unsigned long int nbr, const char *base, int fd)
 {
 	size_t					baselen;
 	int						size;
