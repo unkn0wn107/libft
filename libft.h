@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/03/10 23:21:02 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/03/11 00:00:27 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ int		ft_putnbr_base_fd(long int nbr, const char *base, int fd);
 int		ft_putunbr_base_fd(unsigned long int nbr, const char *base, int fd);
 int		ft_puthex_fd(unsigned long int hex, char low, int fd);
 int		ft_putptr_fd(void *ptr, int fd);
+
 int		ft_printf(const char *format, ...);
+int		ft_dprintf(int fd, const char *format, ...);
 
 #endif
