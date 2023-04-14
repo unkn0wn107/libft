@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/03/22 01:20:59 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/14 20:21:35 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 char	*ft_itoa(int nbr);
 t_byte	ft_itob(int nb);
+void	ft_i32tob(unsigned int nbr, char *binstr);
 
 // MEMORY UTILS
 
