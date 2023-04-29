@@ -6,16 +6,16 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2023/04/15 16:11:51 by agaley           ###   ########lyon.fr    #
+#    Updated: 2023/04/30 01:25:10 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 LIB = libft.a
 H = libft.h
 
-SRCS = 	ft_isdigit.c ft_isprint.c ft_isascii.c ft_isalpha.c ft_isalnum.c \
-	ft_toupper.c ft_tolower.c \
-	ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+SRCS = 	ft_char_checking.c \
+	ft_char_conversion.c \
+	ft_buff_utils.c \
 	ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
 	ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 	ft_atoi.c ft_strdup.c ft_calloc.c \
