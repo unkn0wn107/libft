@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 00:34:06 by agaley            #+#    #+#             */
-/*   Updated: 2023/03/22 01:20:40 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/15 18:11:02 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,19 @@ t_byte	ft_itob(int nb)
 	while (i++ < 8)
 		byte.arr[i] = nb & ft_pow(2, 7 - i);
 	return (byte);
+}
+
+unsigned char	ft_btoi(unsigned char *barr)
+{
+	size_t			i;
+	unsigned char	c;
+
+	i = 0;
+	c = 0;
+	while (barr[i])
+	{
+		c += (barr[i] - '0') * ft_pow(2, 7 - i);
+		i++;
+	}
+	return (c);
 }

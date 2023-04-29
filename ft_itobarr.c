@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 01:20:56 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/15 15:18:16 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/15 16:42:54 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 * Convert a size-bits unsigned integer to a size-bits binary array.
 *
 * @param nbr - The integer to convert.
+* @param size - The size of the integer.
 * @param binstr - The size character-long (+1) NUL-terminated char bin array
 *
 * @return The byte array that corresponds to the integer.
