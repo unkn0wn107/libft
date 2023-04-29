@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   search_compare_mem.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 09:30:27 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 14:48:34 by agaley           ###   ########lyon.fr   */
+/*   Created: 2023/04/30 01:35:25 by agaley            #+#    #+#             */
+/*   Updated: 2023/04/30 01:36:07 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,28 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if (*((unsigned char *)s) == (unsigned char)c)
 			return ((void *)s);
 	return ((void *)0);
+}
+
+/**
+ * Compares the first n bytes (as unsigned char) of memory areas s1 and s2.
+ *
+ * @param s1 The first memory area.
+ * @param s2 The second memory area.
+ * @param n The number of characters to compare.
+ *
+ * @returns The difference between the first bytes (as unsigned char)
+ * that differ in s1 and s2.
+ * 0 if the first n bytes are equal or if n is equal to zero.
+ */
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	int	diff;
+
+	while (n--)
+	{
+		diff = (*(unsigned char *)s1++) - (*(unsigned char *)s2++);
+		if (diff != 0)
+			return (diff);
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/15 18:11:22 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/30 01:28:15 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,15 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *str, char c);
 
-// SEARCH AND COMPARE
+// SEARCH AND COMPARE STR
 
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack, const char *needle, size_t len);
+
+// SEARCH AND COMPARE MEM
+
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 

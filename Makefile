@@ -6,18 +6,17 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2023/04/30 01:25:10 by agaley           ###   ########lyon.fr    #
+#    Updated: 2023/04/30 01:36:47 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 LIB = libft.a
 H = libft.h
 
-SRCS = 	ft_char_checking.c \
-	ft_char_conversion.c \
-	ft_buff_utils.c \
-	ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
-	ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
+SRCS = 	char_checking.c char_conversion.c \
+	buff_utils.c \
+	search_compare_str.c search_compare_mem.c \
+	ft_strlen.c ft_strlcpy.c ft_strlcat.c\
 	ft_atoi.c ft_strdup.c ft_calloc.c \
 	ft_substr.c ft_strjoin.c ft_strtrim.c \
 	ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
