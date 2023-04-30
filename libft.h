@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/30 01:28:15 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/30 01:53:55 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 
-// CHAR CONVERSION
+// NUMBER UTILS
 
-int				ft_toupper(int c);
-int				ft_tolower(int c);
+int				ft_nbrlen(int nbr);
+void			ft_nbrcpy(char *str, int nbr);
 
 // BUFF UTILS
 
@@ -83,14 +83,20 @@ void			*ft_calloc(size_t count, size_t size);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-// PUT
+// PUT CHAR STR
 
 void			ft_putendl_fd(char *s, int fd);
 int				ft_putchar_fd(char c, int fd);
 int				ft_putstr_fd(const char *s, int fd);
+
+// PUT NUMBER
+
 int				ft_putnbr_fd(int nb, int fd);
 int				ft_putnbr_base_fd(long int nbr, const char *base, int fd);
 int				ft_putunbr_base_fd(unsigned long int nbr, const char *base, int fd);
+
+// PUT SPECIAL
+
 int				ft_puthex_fd(unsigned long int hex, char low, int fd);
 int				ft_putptr_fd(void *ptr, int fd);
 

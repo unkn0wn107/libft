@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   number_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 01:31:43 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 14:33:14 by agaley           ###   ########lyon.fr   */
+/*   Created: 2023/04/30 01:47:02 by agaley            #+#    #+#             */
+/*   Updated: 2023/04/30 01:47:12 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static int	ft_nbrlen(int nbr)
+int	ft_nbrlen(int nbr)
 {
 	int			i;
 	int			min;
@@ -34,7 +32,7 @@ static int	ft_nbrlen(int nbr)
 	return (++i + min);
 }
 
-static void	ft_nbrcpy(char *str, int nbr)
+void	ft_nbrcpy(char *str, int nbr)
 {
 	long int	n;
 
@@ -55,22 +53,4 @@ static void	ft_nbrcpy(char *str, int nbr)
 	}
 	if (nbr < 0)
 		*str = '-';
-}
-
-/**
- * Converts an integer to a string.
- *
- * @param nbr The integer to convert.
- *
- * @returns The string representation of the integer.
- */
-char	*ft_itoa(int nbr)
-{
-	char		*str;
-
-	str = (char *)malloc((1 + ft_nbrlen(nbr)) * sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_nbrcpy(str, nbr);
-	return (str);
 }
