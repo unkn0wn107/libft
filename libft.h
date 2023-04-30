@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/30 01:53:55 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/30 02:52:59 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void			*ft_memmove(void *dest, const void *src, size_t n);
 // STR UTILS
 
 size_t			ft_strlen(const char *s);
+size_t			ft_ustrlen(const unsigned char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strdup(const char *s1);
