@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/30 02:52:59 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/04/30 14:24:12 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,5 +109,24 @@ int				ft_dprintf(int fd, const char *format, ...);
 // MATH
 
 int				ft_pow(int nb, int power);
+
+// STACK
+
+typedef struct s_stack_node
+{
+	void				*addr;
+	struct s_stack_node	*next;
+}t_node;
+
+typedef struct s_stack
+{
+	t_node	*head;
+}t_stack;
+
+t_stack			*stack_init(void);
+void			stack_add(t_stack *stack, void *new_addr);
+void			pop(t_stack *stack);
+void			free_stack(t_stack *stack);
+void			*malloc_n_collect(t_stack *stack, size_t size);
 
 #endif
