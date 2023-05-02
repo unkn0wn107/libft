@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 01:45:29 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/30 01:55:56 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/02 02:29:23 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*ft_itoa(int nbr)
 *
 * @return The byte array that corresponds to the integer.
 */
-void	ft_itobarr(unsigned int nbr, unsigned int size, char *binstr)
+void	ft_itob(unsigned int nbr, unsigned int size, char *binstr)
 {
 	unsigned int		i;
 	unsigned int		len;
@@ -98,34 +98,20 @@ void	ft_itobarr(unsigned int nbr, unsigned int size, char *binstr)
 }
 
 /**
-* Convert an integer to a 8 - bits array.
+* Convert a binary array to an integer.
 *
-* @param nb - The integer to convert.
+* @param binstr - The NUL-terminated char binary array
 *
-* @return The byte array that corresponds to the integer.
+* @return The integer that corresponds to the byte array.
 */
-t_byte	ft_itob(int nb)
+int	ft_btoi(char *binstr)
 {
-	t_byte	byte;
-	int		i;
+	size_t	i;
+	int		nbr;
 
 	i = 0;
-	while (i++ < 8)
-		byte.arr[i] = nb & ft_pow(2, 7 - i);
-	return (byte);
-}
-
-unsigned char	ft_btoi(unsigned char *barr)
-{
-	size_t			i;
-	unsigned char	c;
-
-	i = 0;
-	c = 0;
-	while (barr[i])
-	{
-		c += (barr[i] - '0') * ft_pow(2, 7 - i);
-		i++;
-	}
-	return (c);
+	nbr = 0;
+	while (binstr[i])
+		nbr = nbr * 2 + binstr[i++] - '0';
+	return (nbr);
 }
