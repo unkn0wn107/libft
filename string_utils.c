@@ -1,16 +1,75 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   string_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 14:46:18 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 15:17:06 by agaley           ###   ########lyon.fr   */
+/*   Created: 2023/05/08 16:09:15 by agaley            #+#    #+#             */
+/*   Updated: 2023/05/08 16:10:29 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * Calculates the length of a string.
+ *
+ * @param s The string whose length is to be computed.
+ *
+ * @returns The length of the string.
+ */
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+/**
+ * Calculates the length of a string.
+ *
+ * @param s The string whose length is to be computed.
+ *
+ * @returns The length of the string.
+ */
+size_t	ft_ustrlen(const unsigned char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+/**
+ * Copies a string into a destination. NUL-terminate the result.
+ * The NULL-byte should be included in size.
+ *
+ * @param dst The destination string.
+ * @param src The source string.
+ * @param size The size of the destination string.
+ *
+ * @returns The length of src string.
+ */
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	while (size > 0 && i < size - 1 && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	if (size > 0)
+		dst[i] = '\0';
+	return (ft_strlen(src));
+}
 
 /**
  * Concatenates two NUL-terminated strings. NUL-terminate the result.

@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/02 02:26:50 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/08 16:07:51 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,16 @@ size_t	ft_strlen(const char *s);
 size_t	ft_ustrlen(const unsigned char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+// STR MANIPULATION
+
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+
+// SPLIT
+
 char	**ft_split(char const *str, char c);
 
 // SEARCH AND COMPARE STR
@@ -72,6 +78,7 @@ int		ft_btoi(char *bin_arr);
 // MEMORY UTILS
 
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_realloc(char *p, size_t size);
 
 // FUNC UTILS
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   memory_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 10:37:25 by agaley            #+#    #+#             */
-/*   Updated: 2022/12/17 14:55:05 by agaley           ###   ########lyon.fr   */
+/*   Created: 2023/05/08 16:03:28 by agaley            #+#    #+#             */
+/*   Updated: 2023/05/08 16:03:48 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,35 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return ((void *)0);
 	ft_bzero(mem, nmemb * size);
 	return (mem);
+}
+
+/**
+ * Changes the size of the string pointed to by p to size bytes.
+ *
+ * @param p The pointer to reallocate.
+ * @param size The new size of the string.
+ *
+ * @return The pointer to the reallocated string, filled with '\0'.
+ **/
+char	*ft_realloc(char *p, size_t size)
+{
+	size_t	i;
+	char	*str;
+
+	str = malloc(size * sizeof(char));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < size)
+		str[i++] = '\0';
+	if (!p)
+		return (str);
+	i = 0;
+	while (p[i])
+	{
+		str[i] = p[i];
+		i++;
+	}
+	free(p);
+	return (str);
 }
