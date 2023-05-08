@@ -26,7 +26,7 @@ SRCS = 	char_checking.c char_conversion.c \
 	stack.c
 
 OBJS = ${SRCS:.c=.o}
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -pipe
 CC = gcc
 
 all:	${NAME}
@@ -35,6 +35,12 @@ all:	${NAME}
 		${CC} ${CFLAGS} $< -c
 
 ${NAME}:	${OBJS}
+		ar rcs ${NAME} ${OBJS}
+
+%.o_debug:	%.c ${H} Makefile
+		${CC} ${CFLAGS} -g3 $< -c
+
+debug:	${OBJS:.o=.o_debug}
 		ar rcs ${NAME} ${OBJS}
 
 clean:
