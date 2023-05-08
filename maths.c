@@ -6,9 +6,11 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:12:47 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/08 16:13:11 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/08 23:02:30 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_min(size_t val1, size_t val2)
 {

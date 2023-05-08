@@ -6,11 +6,11 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:11:26 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/08 16:15:11 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/08 23:01:25 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 /**
  * Duplicates a string and returns a pointer to the duplicate.
