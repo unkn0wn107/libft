@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/08 16:07:51 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/09 00:53:10 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strpush(char *str, char *new);
 
 // SPLIT
 
@@ -107,8 +108,9 @@ int		ft_putptr_fd(void *ptr, int fd);
 int		ft_printf(const char *format, ...);
 int		ft_dprintf(int fd, const char *format, ...);
 
-// MATH
+// MATHS
 
+size_t	ft_min(size_t val1, size_t val2);
 int		ft_pow(int nb, int power);
 
 // STACK
