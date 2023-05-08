@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:03:28 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/08 16:03:48 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/08 23:44:39 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,6 @@ char	*ft_realloc(char *p, size_t size)
 	str = malloc(size * sizeof(char));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < size)
-		str[i++] = '\0';
 	if (!p)
 		return (str);
 	i = 0;
@@ -61,6 +58,8 @@ char	*ft_realloc(char *p, size_t size)
 		str[i] = p[i];
 		i++;
 	}
+	while (i < size)
+		str[i++] = '\0';
 	free(p);
 	return (str);
 }
