@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 14:07:18 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/10 00:48:43 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/10 21:45:29 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	garb_stack_push(t_trash_stack *stack, void *new_addr)
 void	garb_stack_pop(t_trash_stack *stack)
 {
 	t_trash_node	*popped;
-	void	*address_to_pop;
+	void			*address_to_pop;
 
 	if (stack == NULL)
 	{
