@@ -6,7 +6,7 @@
 #    By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/20 17:24:11 by agaley            #+#    #+#              #
-#    Updated: 2023/05/09 00:48:13 by agaley           ###   ########lyon.fr    #
+#    Updated: 2023/05/09 22:51:17 by agaley           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = 	char_checking.c char_conversion.c \
 	ft_split.c ft_strmapi.c ft_striteri.c \
 	put_char_str.c put_number.c put_special.c \
 	ft_printf.c ft_dprintf.c \
-	stack.c
+	garbage_collector.c
 
 OBJS = ${SRCS:.c=.o}
 CFLAGS = -Wall -Wextra -Werror -pipe

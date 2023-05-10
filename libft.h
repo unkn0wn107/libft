@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:45:12 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/09 00:53:10 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/05/10 00:48:17 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,21 +115,21 @@ int		ft_pow(int nb, int power);
 
 // STACK
 
-typedef struct s_stack_node
+typedef struct s_garbage_stack_node
 {
-	void				*addr;
-	struct s_stack_node	*next;
-}t_node;
+	void						*addr;
+	struct s_garbage_stack_node	*next;
+}t_trash_node;
 
-typedef struct s_stack
+typedef struct s_garbage_stack
 {
-	t_node	*head;
-}t_stack;
+	t_trash_node	*head;
+}t_trash_stack;
 
-t_stack	*stack_init(void);
-void	stack_add(t_stack *stack, void *new_addr);
-void	pop(t_stack *stack);
-void	free_stack(t_stack *stack);
-void	*malloc_n_collect(t_stack *stack, size_t size);
+t_trash_stack	*garb_stack_init(void);
+void	garb_stack_push(t_trash_stack *stack, void *new_addr);
+void	garb_stack_pop(t_trash_stack *stack);
+void	garb_stack_free(t_trash_stack *stack);
+void	*garb_stack_collect(t_trash_stack *stack, size_t size);
 
 #endif
