@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:09:15 by agaley            #+#    #+#             */
-/*   Updated: 2023/05/08 23:52:22 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/06/28 10:26:19 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,15 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
+	i = 0;
 	if (!s)
 		return (0);
-	i = 0;
-	while (s[i])
-		i++;
+	else
+	{
+		i = 0;
+		while (s[i])
+			i++;
+	}
 	return (i);
 }
 
@@ -94,18 +98,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	if (!dst && size == 0)
 		return (ft_strlen(src));
-	dstlen = ft_strlen(dst);
-	len = dstlen + ft_strlen(src);
-	if (size < dstlen || size == 0)
-		return (size + ft_strlen(src));
-	i = dstlen;
-	j = 0;
-	while (i < size - 1 && src[j])
+	else
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		dstlen = ft_strlen(dst);
+		len = dstlen + ft_strlen(src);
+		if (size < dstlen || size == 0)
+			return (size + ft_strlen(src));
+		i = dstlen;
+		j = 0;
+		while (i < size - 1 && src[j])
+		{
+			dst[i] = src[j];
+			i++;
+			j++;
+		}
+		dst[i] = '\0';
+		return (len);
 	}
-	dst[i] = '\0';
-	return (len);
 }
