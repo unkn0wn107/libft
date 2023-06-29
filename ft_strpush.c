@@ -19,9 +19,11 @@ char	*ft_strpush(char *str, const char *add)
 	size_t	len;
 	char	*new;
 
+	if (!str)
+		return (NULL);
 	len = ft_strlen(str) + ft_strlen(add);
 	new = malloc(len + 1);
-	if (!str)
+	if (!new)
 		return (NULL);
 	i = 0;
 	j = 0;
