@@ -6,7 +6,7 @@
 /*   By: agaley <agaley@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 01:30:11 by agaley            #+#    #+#             */
-/*   Updated: 2023/04/30 01:33:52 by agaley           ###   ########lyon.fr   */
+/*   Updated: 2023/07/19 19:17:03 by agaley           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,32 @@ char	*ft_strnstr(const char *hs, const char *needle, size_t len)
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while (n--)
+	{
+		if (*s1 != *s2 || *s1 == '\0' || *s2 == '\0')
+			return ((int)(*(unsigned char *)s1 - *(unsigned char *)s2));
+		s1++;
+		s2++;
+	}
+	return (0);
+}
+
+/**
+ * Compares the first characters of strings s1 and s2 upto s1 length.
+ *
+ * @param s1 The first string.
+ * @param s2 The second string.
+ *
+ * @returns The difference between the first characters (as unsigned char)
+ * that differ in s1 and s2. 0 if the characters are equal.
+ */
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	size_t	len;
+
+	len = 0;
+	if (s1)
+		len = ft_strlen(s1);
+	while (len--)
 	{
 		if (*s1 != *s2 || *s1 == '\0' || *s2 == '\0')
 			return ((int)(*(unsigned char *)s1 - *(unsigned char *)s2));
